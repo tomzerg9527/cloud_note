@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<!-- 命名空间:
+		一个项目里会有很多个映射文件,为了避免重名,添加命名空间
+ -->
+<mapper namespace="com.fuck.dao.UserDAO">
+	<select id="findByName" resultType="com.fuck.entity.User" >select * from cn_user where cn_user_name=#{fuck}</select>
+	<insert id="addUser" parameterType="com.fuck.entity.User">insert into cn_user (cn_user_id,cn_user_name,cn_user_password,cn_user_nick,cn_user_token) values(#{cnUserId},#{cnUserName},#{cnUserPassword},#{cnUserNick},#{cnUserToken})</insert>
+</mapper>
